@@ -8,7 +8,7 @@ function openCard() {
 }
 
 function launchConfetti() {
-    for (let i = 0; i < 30; i++) { // Genera 30 piezas de confeti
+    for (let i = 0; i < 100; i++) { // Genera 30 piezas de confeti
         let confetti = document.createElement("div");
         confetti.classList.add("confetti");
         document.body.appendChild(confetti);
