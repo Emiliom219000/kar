@@ -1,17 +1,14 @@
 function openCard() {
-    document.querySelector(".envelope").classList.toggle("open");
-}
-function openCard() {
     let envelope = document.querySelector(".envelope");
     envelope.classList.toggle("open");
 
     if (envelope.classList.contains("open")) {
-        launchConfetti();
+        launchConfetti(); // Llama a la función del confeti cuando se abre la tarjeta
     }
 }
 
 function launchConfetti() {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 30; i++) { // Genera 30 piezas de confeti
         let confetti = document.createElement("div");
         confetti.classList.add("confetti");
         document.body.appendChild(confetti);
@@ -23,7 +20,8 @@ function launchConfetti() {
         confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
 
         setTimeout(() => {
-            confetti.remove();
+            confetti.remove(); // Elimina el confeti después de unos segundos
         }, 5000);
     }
 }
+
